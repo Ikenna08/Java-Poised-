@@ -1,5 +1,4 @@
-111,GV Townhouse,Building,1 Main Street,342651,20000,18000,18/11/2021,Pending
-222,Construction Ozi,Construction,2 Back Road,342652,52000,52000,11/10/2021,Finalised
-333,Vista House,Building,3 Church Ave,342653,15000,5000,24/10/2021,Pending
-444,Building Tyson,Building,2 Main Street,427832,195000,90000,8/12/2021,Pending
-12,deas,house,123 free raod,8756,3000000,30000,20/24/2031,Pending
+111,GV Townhouse,Building,1 Main Street,342651,20000,18000,18/11/2021,Pending,Mercy Josh,09128283,mercyj@gmail.com,23 MullBerg Ave.,Roseline Ojo,012636718,rojo@aol.com,98 Zukima Str.,Mike Ejike,0802372661,mike@mail.com,45 Milkaway Close
+222,Construction Ozi,Construction,2 Back Road,342652,52000,52000,11/10/2021,Finalised,Peter Bush,098656571,pbush@webmail.co.za,17 Lustro Street,Vincent Okpara,021233379,vico@mail.com.ng,7 Obani Road,Uju Ozi,0803322445576,ujuozi@gmail.com,13 New Lagos Rd.
+333,Vista House,Building,3 Church Ave,342653,15000,5000,24/10/2021,Pending,Paul Hali,078655421,phali@yahoo.co.uk,1 AZ Street,Peter Kim,0121277368,peterkim@mailcom,85 Church Street,Mbali Zulu,01178622121,mbali@webmail.co.za,68 Tomi Ave.
+444,Building Tyson,Building,2 Main Street,427832,195000,90000,8/12/2021,Pending,Luca Zukumi,0972872722,lucaz@hotmail.com,23 Holizo Ave.,Greg Obama,090727282,obamag@icloud.com,13 Mildow Rd.,Mike Tyson,011838273,miket@mail.com,69 Ally Way

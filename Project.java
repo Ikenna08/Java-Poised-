@@ -8,7 +8,7 @@ class ProjectEntity
 	String physicalAddress;
 }
 
-public class Project{
+public class Project {
 
 	// Attributes
    public  String projectNumber;
@@ -28,7 +28,6 @@ public class Project{
    // Methods
 
 	public void inputData() {
-		//Person.inputPersonData();
 		Scanner Project = new Scanner(System.in);
 		
 		// Enter Project Details
@@ -96,14 +95,14 @@ public class Project{
 		this.customer.physicalAddress = Project.nextLine();
 		
 		if (this.projectName.equals("") || this.projectName.equals(null) || this.projectName.equals(" ")) {
-			String namestr = getProjectName();
+			String namestr = this.customer.name;
 			this.projectName = this.projectType +" "+ namestr.substring(namestr.lastIndexOf(" ")+1);
 		}
 		
 	}
 	
 	public String outFileData() {
-		String out = this.projectNumber+","+this.projectName+","+this.projectType+","+this.physicalAddress+","+this.ERFnumber+","+this.totalAmountCharged+","+this.totalAmountToDate+","+this.deadlineDate+","+this.status;
+		String out = this.projectNumber+","+this.projectName+","+this.projectType+","+this.physicalAddress+","+this.ERFnumber+","+this.totalAmountCharged+","+this.totalAmountToDate+","+this.deadlineDate+","+this.status+","+this.architect.name+","+this.architect.phone+","+this.architect.email+","+this.architect.physicalAddress+","+this.contractor.name+","+this.contractor.phone+","+this.contractor.email+","+this.contractor.physicalAddress+","+this.customer.name+","+this.customer.phone+","+this.customer.email+","+this.customer.physicalAddress;
 		
 		return out;
 	}
@@ -121,7 +120,7 @@ public class Project{
 		System.out.println("Project Deadline Date: "+this.deadlineDate);
 		System.out.println("Project Status: "+this.status);
 		
-//		// Display Architect Details
+		// Display Architect Details
 		System.out.println("Architect Name: "+this.architect.name);
 		System.out.println("Architect Phone Number: "+this.architect.phone);
 		System.out.println("Architect Email: "+this.architect.email);
@@ -132,8 +131,8 @@ public class Project{
 		System.out.println("Contractor Phone Number: "+this.contractor.phone);
 		System.out.println("Contractor Email: "+this.contractor.email);
 		System.out.println("Contractor Physical Address: "+this.contractor.physicalAddress);
-//		
-//		// Display Customer Details
+		
+		// Display Customer Details
 		System.out.println("Customer Name: "+this.customer.name);
 		System.out.println("Customer Phone Number: "+this.customer.phone);
 		System.out.println("Customer Email: "+this.customer.email);

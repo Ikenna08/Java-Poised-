@@ -74,13 +74,13 @@ public class Poised {
 					myproject[i].contractor.email = parts[15];
 					myproject[i].contractor.physicalAddress = parts[16];
 					
-					myproject[i].customer.name = parts[9];
+					myproject[i].customer.name = parts[17];
 					myproject[i].customer.phone = parts[18];
 					myproject[i].customer.email = parts[19];
 					myproject[i].customer.physicalAddress = parts[20];
 					
 					if (myproject[i].projectName.equals("") || myproject[i].projectName.equals("null") || myproject[i].projectName.equals(" ")) {
-						String namestr = myproject[i].getProjectName();
+						String namestr = myproject[i].customer.name;
 						myproject[i].projectName = myproject[i].projectType +" "+ namestr.substring(namestr.lastIndexOf(" ")+1);
 					}
 			}
@@ -135,47 +135,47 @@ public class Poised {
 					}
 				}
 				break;
-//			  case "5":
-//				System.out.println("--Display Uncompleted Project--");
-//				for(int i=0; i< pjnum;i++){
-//					if(myproject[i].getProjectStatus().equals("Pending")){
-//						pcnt = i + 1;
-//						System.out.println("======= Display Data For Project "+pcnt+" =======");
-//						myproject[i].displayData();
-//						System.out.println(" ");
-//					}
-//				}
-//				break;
-//			  case "6":
-//				System.out.println("--Display projects that are past the due date--");
-//				for(int i=0; i< pjnum;i++){
-//					try
-//					{
-//						if (new SimpleDateFormat("dd/MM/yyyy").parse(myproject[i].getDeadlineDate()).before(new Date())) 
-//						{
-//							pcnt = i + 1;
-//							System.out.println("======= Display Data For Project "+pcnt+" =======");
-//							myproject[i].displayData();
-//							System.out.println(" ");
-//						}
-//					} 
-//					catch (Exception ex)
-//					{
-//						System.out.println("Date format error");
-//					}
-//		
-//				}
-//				break;
-//			  case "7":
-//				System.out.println("--Find and select a project by project Name or Number--");
-//				System.out.print("Enter Project Name or Number: ");
-//				String pjnumFindData = Choose.nextLine();
-//				for(int i=0; i< pjnum;i++){
-//					if(pjnumFindData.equals(myproject[i].getProjectNumber()) || pjnumFindData.equals(myproject[i].getProjectName())){
-//						myproject[i].displayData();
-//					}
-//				}
-//				break;
+			  case "5":
+				System.out.println("--Display Uncompleted Project--");
+				for(int i=0; i< pjnum;i++){
+					if(myproject[i].getProjectStatus().equals("Pending")){
+						pcnt = i + 1;
+						System.out.println("======= Display Data For Project "+pcnt+" =======");
+						myproject[i].displayData();
+						System.out.println(" ");
+					}
+				}
+				break;
+			  case "6":
+				System.out.println("--Display projects that are past the due date--");
+				for(int i=0; i< pjnum;i++){
+					try
+					{
+						if (new SimpleDateFormat("dd/MM/yyyy").parse(myproject[i].getDeadlineDate()).before(new Date())) 
+						{
+							pcnt = i + 1;
+							System.out.println("======= Display Data For Project "+pcnt+" =======");
+							myproject[i].displayData();
+							System.out.println(" ");
+						}
+					} 
+					catch (Exception ex)
+					{
+						System.out.println("Date format error");
+					}
+		
+				}
+				break;
+			  case "7":
+				System.out.println("--Find and select a project by project Name or Number--");
+				System.out.print("Enter Project Name or Number: ");
+				String pjnumFindData = Choose.nextLine();
+				for(int i=0; i< pjnum;i++){
+					if(pjnumFindData.equals(myproject[i].getProjectNumber()) || pjnumFindData.equals(myproject[i].getProjectName())){
+						myproject[i].displayData();
+					}
+				}
+				break;
 			  case "8":
 				System.out.println("--Finalise Project--");
 				System.out.print("Enter project: ");
@@ -185,7 +185,7 @@ public class Poised {
 						myproject[i].finaliseProject();
 						String outFileData = myproject[i].outFileData();
 						try {
-							PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("myprojectfile.txt", true)));
+							PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("completed_project.txt", true)));
 							out.println(outFileData);
 							out.close();
 						} 
